@@ -1,13 +1,3 @@
-import re
-
-<<<<<<< HEAD
-nums = list(range(10))
-operations = ["(", ")", "*", "/", "+", "-"]
-
-
-
-print(nums)
-=======
 nums_arr = list(range(10))
 ops_arr = ["*", "/", "+", "-"]
 
@@ -46,13 +36,9 @@ def calculate(expr):
         if expr[k].isdigit() or expr[k] == ".":
             i = k
 
-            print(expr)
-
             while i < len(expr) and (expr[i].isdigit() or expr[i] == "."):
                 i += 1
             num = expr[k:i]
-
-            print(num)
 
             try:
                 if "." in num:
@@ -65,8 +51,6 @@ def calculate(expr):
                 raise ValueError(f"error: {num} - is not a number")
 
             k = i
-
-            print(nums)
 
             continue
 
@@ -82,7 +66,6 @@ def calculate(expr):
                 raise ValueError("error: expected '('")
 
         elif expr[k] in ops_arr:
-            print(expr[k])
             if expr[k] == "-" and (k == 0 or expr[k - 1] == "("):
                 i = k + 1
 
@@ -121,9 +104,8 @@ def calculate(expr):
     if len(nums) != 1:
         raise ValueError("error: whole expression is not recognised")
 
-    return nums[0], nums, ops
+    return nums[0]
 
 expr = input("Enter expression: ").strip()
 
 print(f"{expr} = {calculate(expr)}")
->>>>>>> 84a4bc9 (7th commit)
