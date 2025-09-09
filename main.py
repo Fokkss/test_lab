@@ -1,2 +1,8 @@
-print("Hello world!")
-print("Second line")
+import re
+
+nums = list(range(10))
+operations = ["(", ")", "*", "/", "+", "-"]
+
+
+
+print(nums)
